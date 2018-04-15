@@ -3,6 +3,7 @@ module.exports = {
     "src_folders" : "tests",
     "custom_commands_path": "",
     "custom_assertions_path": "",
+    //"page_objects_path": "page-objects",
     "globals_path": "",
     
   
