@@ -3,9 +3,9 @@ const data = require('./data')
 
 const loadHomePage = (browser) => {
     browser
-        //.waitForElementVisable('body', 5000)
-        //.assert.visable(selectors.overStockLogo)
-        //.assert.visable(selectors.overStockLogoText)
+        .waitForElementVisible('body', 5000)
+        .assert.visible(selectors.overStockLogo)
+        .assert.visible(selectors.overStockLogoText)
 } 
 
 module.exports = {
