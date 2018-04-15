@@ -3,15 +3,15 @@ const functions = require('../sources/functions')
 const selectors = require('../sources/selectors')
 
 module.exports = {
-    before: client => {
-        client.url('https://www.overstock.com/')
+    before: browser => {
+        browser.url('https://www.overstock.com/')
     },
 
-    after: client => {
-        client
+    after: browser => {
+        browser
     },
 
-    'Load Home Page': client => {
+    'Load Home Page': browser => {
         functions.loadHomePage(client)
     },
 
