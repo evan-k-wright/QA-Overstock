@@ -12,7 +12,7 @@ module.exports = {
     },
 
     'Load Home Page': browser => {
-        functions.loadHomePage(client)
+        functions.loadHomePage(browser)
     },
 
 }
