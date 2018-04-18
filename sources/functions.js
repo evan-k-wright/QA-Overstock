@@ -1,16 +1,29 @@
-// const data = require('./data')
-// const selectors = require('./selectors')
+const uiHomePage = (browser) => {
+    let homePage = browser.page.homePage()
+        homePage.navigate()
+        homePage.waitForElementVisible('@overStockLogo', 1000)
+                .waitForElementVisible('@overStockLogoText', 1000)
+                .waitForElementVisible('@searchBar', 1000)
+                .waitForElementVisible('@searchSubmit', 1000)
+                .waitForElementVisible('@accountLogo', 1000)
+                .waitForElementVisible('@listsLogo', 1000)
+                .waitForElementVisible('@cartLogo', 1000)
+}
 
-// const loadHomePage = (browser) => {
-//     browser
-//         .waitForElementVisible('body', 5000)
-//         .assert.visible(selectors.overStockLogo)
-//         .assert.visible(selectors.overStockLogoText)
-//         .assert.visible(selectors.searchBar)
-//         .assert.visible(selectors.searchSubmit)
-// } 
+const menTab = (browser) => {
+    let menTab = browser.page.menTab()
+        menTab.navigate()
+        menTab.waitForElementVisible('@menTab', 1000)
+                .moveToElement('@menTab', undefined, undefined)
+                .waitForElementVisible('@menTitle', 1000)
+                .waitForElementVisible('@watches', 1000)
+                .click('@watches')
+                .waitForElementPresent('@mensWatches', 5000)
+    }
 
-// module.exports = {
-//     loadHomePage: loadHomePage,
 
-// }
+module.exports = {
+    menTab: menTab,
+    uiHomePage: uiHomePage,
+
+}
