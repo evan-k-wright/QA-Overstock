@@ -9,5 +9,7 @@ module.exports = {
             selector: '(//a[@data-tid="TN:Men"])[3]',
             locateStrategy: 'xpath'
         },
+        mensWatches: 'h1[class="section-heading heading-2"]',
+        watches: 'li[data-submenu-id="submenu-watches-10"]',
     }
 }

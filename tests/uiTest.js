@@ -23,6 +23,9 @@ module.exports = {
         menTab.waitForElementVisible('@menTab', 5000)
                 .moveToElement('@menTab', undefined, undefined)
                 .waitForElementVisible('@menTitle', 5000)
+                .waitForElementVisible('@watches', 5000)
+                .click('@watches')
+                .waitForElementVisible('@mensWatches', 5000)
     }
 
 }
