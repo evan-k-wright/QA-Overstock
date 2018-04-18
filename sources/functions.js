@@ -1,3 +1,5 @@
+const data = require('./data')
+
 const uiHomePage = (browser) => {
     let homePage = browser.page.homePage()
         homePage.navigate()
@@ -21,9 +23,19 @@ const menTab = (browser) => {
                 .waitForElementPresent('@mensWatches', 5000)
     }
 
+    const searchWatches = (browser, data) => {
+        let search = browser.page.searchItem()
+            search.navigate()
+            search.waitForElementPresent('@searchBar')
+                    .setValue('@searchBar', data.searchWatches)
+                    .click('@searchSubmit')
+                    .waitForElementPresent('@watches', 5000)
+    }
+
 
 module.exports = {
     menTab: menTab,
+    searchWatches: searchWatches,
     uiHomePage: uiHomePage,
 
 }

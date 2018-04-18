@@ -1,3 +1,4 @@
+const data = require('../sources/data')
 const functions = require('../sources/functions')
 
 module.exports = {
@@ -9,14 +10,14 @@ module.exports = {
         browser
     },
 
-    'Home Page UI Test': browser => {
-        functions.uiHomePage(browser)
+    // 'Home Page UI Test': browser => {
+    //     functions.uiHomePage(browser)
+    // },
+    // 'Men tab': browser => {
+    //     functions.menTab(browser)
+    // },
+    'Search Item': browser => {
+        functions.searchWatches(browser, data)
     },
-    'Men tab': browser => {
-        functions.menTab(browser)
-    }
-
-
     
-
 }
