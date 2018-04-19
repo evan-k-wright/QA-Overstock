@@ -26,8 +26,8 @@ const menTab = (browser) => {
     const searchWatches = (browser, data) => {
         let search = browser.page.searchItem()
             search.navigate()
-            search.waitForElementPresent('@searchBar')
-                    .setValue('@searchBar', data.searchWatches)
+            search.waitForElementPresent('@searchBar', 5000)
+                    .setValue('@searchInput', data.searchWatches)
                     .click('@searchSubmit')
                     .waitForElementPresent('@watches', 5000)
     }
