@@ -30,6 +30,9 @@ const menTab = (browser) => {
                     .setValue('@searchInput', data.searchWatches)
                     .click('@searchSubmit')
                     .waitForElementPresent('@watches', 5000)
+                    .click('@aceCuffLinks')
+                    .waitForElementPresent('@aceCuffLinksTitle', 5000)
+                    .assert.containsText('@aceCuffLinksTitle', 'Bling Jewelry Stainless Steel Plated Poker Four of a Kind Aces Playing Cards Enamel Cufflinks')
     }
 
 
