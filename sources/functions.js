@@ -44,6 +44,7 @@ const menTab = (browser) => {
 
 
 module.exports = {
+    createAccount: createAccount,
     menTab: menTab,
     searchWatches: searchWatches,
     uiHomePage: uiHomePage,

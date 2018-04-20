@@ -10,14 +10,17 @@ module.exports = {
         browser
     },
 
+    'Create Account': browser => {
+        functions.createAccount(browser, data)
+    }
     // 'Home Page UI Test': browser => {
     //     functions.uiHomePage(browser)
     // },
     // 'Men tab': browser => {
     //     functions.menTab(browser)
     // },
-    'Search Item': browser => {
-        functions.searchWatches(browser, data)
-    },
+    // 'Search Item': browser => {
+    //     functions.searchWatches(browser, data)
+    // },
     
 }
