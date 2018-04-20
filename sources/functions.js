@@ -1,10 +1,21 @@
 const createAccount = (browser, data) => {
     let createAccount = browser.page.createAccount()
     createAccount.navigate()
-    createAccount.waitForElementVisible('@accountLogo', 5000)
-                 .moveToElement('@accountLogo', undefined, undefined)
-                 .click('@signInButton')
-                 .waitForElementVisible('@createAccountEmail', 5000)
+    createAccount
+        .waitForElementVisible('@accountLogo', 5000)
+        .waitForElementVisible('@closePopUp', 5000)
+        .click('@closePopUp')
+        .moveToElement('@accountLogo', undefined, undefined)
+        .waitForElementVisible('@newAccount', 5000)
+        .click('@newAccount')
+        .waitForElementVisible('@createAccountEmail', 5000)
+        .waitForElementVisible('@createAccountPassword', 5000)
+        .waitForElementVisible('@confrimPassword', 5000)
+        .setValue('@createAccountEmail', data.createAccountEmail)
+        .setValue('@createAccountPassword', data.password)
+        .setValue('@confrimPassword', data.password)
+        .click('@createAccountButton')
+        .waitForElementVisible('@welcome')
 }
 
 const uiHomePage = (browser) => {
