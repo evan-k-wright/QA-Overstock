@@ -10,12 +10,12 @@ module.exports = {
         browser
     },
 
-    'Home Page UI Test': browser => {
-        functions.uiHomePage(browser)
-    },
-    'Men tab': browser => {
-        functions.menTab(browser)
-    },
+    // 'Home Page UI Test': browser => {
+    //     functions.uiHomePage(browser)
+    // },
+    // 'Men tab': browser => {
+    //     functions.menTab(browser)
+    // },
     'Search Item': browser => {
         functions.searchWatches(browser, data)
     },

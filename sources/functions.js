@@ -1,4 +1,8 @@
-const data = require('./data')
+const createAccunt = (browser, data) => {
+    let createAccunt = browser.page.createAccunt()
+    createAccunt.navigate()
+    
+}
 
 const uiHomePage = (browser) => {
     let homePage = browser.page.homePage()
