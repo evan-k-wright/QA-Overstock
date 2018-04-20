@@ -1,7 +1,10 @@
-const createAccunt = (browser, data) => {
-    let createAccunt = browser.page.createAccunt()
-    createAccunt.navigate()
-    
+const createAccount = (browser, data) => {
+    let createAccount = browser.page.createAccount()
+    createAccount.navigate()
+    createAccount.waitForElementVisible('@accountLogo', 5000)
+                 .moveToElement('@accountLogo', undefined, undefined)
+                 .click('@signInButton')
+                 .waitForElementVisible('@createAccountEmail', 5000)
 }
 
 const uiHomePage = (browser) => {
