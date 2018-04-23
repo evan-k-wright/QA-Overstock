@@ -3,8 +3,8 @@ const createAccount = (browser, data) => {
     createAccount.navigate()
     createAccount
         .waitForElementVisible('@accountLogo', 5000)
-        .waitForElementVisible('@closePopUp', 5000)
-        .click('@closePopUp')
+        //.waitForElementVisible('@closePopUp', 5000)
+        //.click('@closePopUp')
         .moveToElement('@accountLogo', undefined, undefined)
         .waitForElementVisible('@newAccount', 5000)
         .click('@newAccount')
@@ -16,6 +16,7 @@ const createAccount = (browser, data) => {
         .setValue('@confrimPassword', data.password)
         .click('@createAccountButton')
         .waitForElementVisible('@welcome')
+        .expect.element('@welcome')
 }
 
 const uiHomePage = (browser) => {
