@@ -15,8 +15,8 @@ const createAccount = (browser, data) => {
         .setValue('@createAccountPassword', data.password)
         .setValue('@confrimPassword', data.password)
         .click('@createAccountButton')
-        .waitForElementVisible('@welcome')
-        .expect.element('@welcome')
+        .waitForElementVisible('@welcome', 5000)
+        .expect.element('@welcome').text.to.equal('Welcome rideburtonsnow3')
 }
 
 const uiHomePage = (browser) => {
